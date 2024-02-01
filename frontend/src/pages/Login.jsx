@@ -6,8 +6,8 @@ import OAuth from '../components/OAuth'
 
 export default function Login() {
   return (
-    <div className='p-3 max-w-lg mx-auto shadow mt-5 mb-5 bg-slate-300 rounded' >
-    <h1 className='text-3xl text-center font-semibold my-7'>Login</h1>
+    <div className='p-3 max-w-lg mx-auto shadow mt-5 mb-5 bg-green-100 rounded' >
+    <h1 className='text-3xl text-center font-semibold my-7 text-yellow-800'>Login</h1>
     <form className='flex flex-col gap-4'>
       <input
         type='email'
@@ -22,10 +22,10 @@ export default function Login() {
         id='password'
       />
 
-      <button
+      <button 
         className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
       >
-        Login
+        <Link to={'/profile'}>Login</Link>
       </button>
       <OAuth/>
     </form>

@@ -1,15 +1,15 @@
 import React from 'react'
+import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { FaTrashCan } from "react-icons/fa6";
-import { FaEdit } from "react-icons/fa";
 import { LiaSignOutAltSolid } from "react-icons/lia";
 
 
 
-export default function Profile() {
+
+export default function AdminProfile() {
   return (
-    <div className='m-5 p-5 mx-auto'>
-      <div className=' p-3 shadow  bg-green-100 rounded'>
+    <div className='p-3 max-w-lg mx-auto'>
+      <div className=' m-5  shadow mt-5 mb-5 bg-green-100 rounded p-3' >
         <h1 className='text-3xl font-semibold text-center my-7 text-red-900'>Profile</h1>
         <form className='flex flex-col gap-4'>
           <input
@@ -53,87 +53,64 @@ export default function Profile() {
           >
             Update
           </button>
-          </form>
+         
+        </form>
       </div>
-       <div className='d-flex align-items-center justify-between mt-5 p-3 shadow  bg-green-100 rounded'>
-          <Link to={'/createlist'}
-            className='bg-red-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95'
-          >
-            New post
-          </Link>
-         <div className='flex row'>
-            <span
-              className='text-red-700 cursor-pointer'
-            >
-                   <FaTrashCan  size={'20px'}/>
-                    Delete account
-            </span>
-            <span  className='text-red-700 cursor-pointer'>
-            <LiaSignOutAltSolid size={'28px'}/>
-            </span>
-         </div>
-       </div>
-      {/* <div className='mt-3 p-3 shadow  bg-green-100 rounded'>
-        <div className='flex justify-between mt-5'>
-          <span
-            className='text-red-700 cursor-pointer'
-          >
-                                                     <FaTrashCan  size={'20px'}/>
-                  Delete account
-          </span>
-          <span  className='text-red-700 cursor-pointer'>
-          <LiaSignOutAltSolid size={'28px'}/>
-          </span>
-        </div>
-      </div> */}
+      <div className='flex justify-center mt-5'>
+       
+        <span  className='text-red-700 cursor-pointer'>
+        <LiaSignOutAltSolid size={'28px'}/>
 
-     <div className='mt-5 p-3 shadow  bg-green-100 rounded'>
-        <p className='text-red-700 mt-5'></p>
-        <p className='text-green-700 mt-5'>
-        </p>
-        <button  className='text-green-700 w-full'>
-          Show Listings
-        </button>
-        <p className='text-red-700 mt-5'>
-        </p>
-  
-          <div className='flex flex-col gap-4'>
-            <h1 className='text-center mt-7 text-2xl font-semibold text-red-900'>
-              Your Listings
-            </h1>
-           
-               <div className='border rounded-lg p-3 flex justify-between items-center gap-4'>
-                <Link >
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu8hN2RGZbFv11AXjqQy3_klQHT9pMKmQV523i9-Xmcg&s"
-                    alt='listing cover'
-                    className='h-16 w-16 object-contain'
-                  />
-                </Link>
-                <Link to={'/list'}
-                  className='text-slate-700 font-semibold  hover:underline truncate flex-1'
-                  
-                >
-                  <p>vvvvvv</p>
-                </Link>
-  
-                <div className='flex flex-col item-center'>
-                  <button
-                   
-                    className='text-red-700 uppercase'
-                  >
-                                       <FaTrashCan  size={'20px'}/>
+        </span>
+      </div>
 
-                  </button>
-                  <Link to={'/update'}>
-                    <button className='text-green-700 uppercase'><FaEdit size={'23px'}/></button>
-                  </Link>
-                </div>
-              </div>
-            
-          </div>
+      <p className='text-red-700 mt-5'></p>
+      <p className='text-green-700 mt-5'>
+      </p>
       
-     </div>
+      <p className='text-red-700 mt-5'>
+      </p>
+
+        <div className='flex flex-col gap-4'>
+          <h1 className='text-center mt-7 text-2xl font-semibold text-red-900'>
+           Users
+          </h1>
+         
+             <div className='border rounded-lg p-3 flex justify-between items-center gap-4'>
+              
+             <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Max</td>
+          <td>max@gmail.com</td>
+          <td> <button
+                 
+                 className='text-red-700 uppercase'
+               >
+                 Delete
+               </button></td>
+        </tr>
+        
+      </tbody>
+    </Table>
+
+              <div className='flex flex-col item-center'>
+               
+               
+              </div>
+            </div>
+          
+        </div>
+    
     </div>
   )
 }

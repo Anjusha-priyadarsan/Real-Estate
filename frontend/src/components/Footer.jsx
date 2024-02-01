@@ -10,7 +10,7 @@ import { FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className=' bg-slate-950 ' style={{padding:"50px"}}>
+    <div className=' bg-green-800 ' style={{padding:"50px"}} id='footer'>
 
     <div className='footer-content'>
       <Container>
@@ -22,7 +22,7 @@ export default function Footer() {
            Dream Home is a full stack service provider for all real estate needs, with 15+ services including home loans, pay rent, packers and movers, legal assistance, property valuation, and expert advice. As the largest platform for buyers and sellers of property to connect in a transparent manner, Magicbricks has an active base of over 15 lakh property listings.
            </div>
            <div className='social mt-3'>
-         <Button className=' bg-slate-950' > <FaYoutube /></Button>
+         <Button  > <FaYoutube /></Button>
           <Button className='btnnn'> <BsInstagram/></Button>
            <Button className='btnnn' > <  FaTwitter /></Button>
            <Button  > <FaFacebook /></Button>

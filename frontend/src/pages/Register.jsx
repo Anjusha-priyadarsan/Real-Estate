@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 export default function Register() {
   return (
-    <div className='p-3 max-w-lg mx-auto shadow mt-7 mb-7 bg-slate-300'>
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign Up</h1>
+    <div className='p-3 max-w-lg mx-auto shadow mt-7 mb-7 bg-green-100'>
+      <h1 className='text-3xl text-center font-semibold my-7 text-yellow-900'>Sign Up</h1>
       <form  className='flex flex-col gap-4'>
         <input
           type='text'
